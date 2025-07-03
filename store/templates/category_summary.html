@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Header -->
+<header class="bg-dark py-3">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Categories</h1>
+            <p class="lead fw-normal text-white-50 mb-0">
+                Choose Category Below...
+            </p>
+        </div>
+    </div>
+</header>
+
+<br/>
+<div class="container">
+    <div class="row" style="text-align:center;">
+        <div class="col">
+            {% for category in categories %}
+                <h3>
+                    <a href="{% url 'category' category %}" class="d-inline-flex py-1 px-2 text-decoration-none border rounded-2" style="color: black; background-color: gold;">{{ category }}</a>
+                </h3>
+            {% endfor %}
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+
+
+{% endblock %}
